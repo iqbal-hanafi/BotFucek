@@ -1,5 +1,5 @@
 # BotFucek
-Bot Sederhana
+simple bot
 
 ![ruby](https://img.shields.io/badge/ruby-dev-purple "ruby")
 ![nokogiri](https://img.shields.io/badge/nokogiri-1.8.1-green "nokogiri -v 1.8.1")
