@@ -1,4 +1,3 @@
-#!/data/data/com.termux/files/usr/bin/ruby
 
 module Post
 	def Post.coment(link_post, msg, image)
@@ -78,4 +77,3 @@ module Post
 		return true
 	end
 end
-

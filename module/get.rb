@@ -1,14 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/ruby
 
 
-module Get
-	def Get.set_kuekis(kuki)
-		BROWSER.request_headers["Cookie"] = kuki
-
-		nama = BROWSER.get(BASEURL).body.match(/Keluar\s\((.+?)\)/)
-		return nama.nil? ? nil : nama[-1]
-	end
-	
+module Get	
 	def Get.posts(id="me", jumlah = nil) 
 		if jumlah.nil? then
 			jumlah = 10
@@ -20,7 +12,7 @@ module Get
 		kintol = kontol.body =~ /Lihat Berita Lain/ ? "Lihat Berita Lain" : "Tampilkan lainnya"
 		while dlinks.length != jumlah do
 			kontol.links_with(:text => /^Berita Lengkap$/).each {|l|
-				break dlinks.length == jumlah
+				break if dlinks.length == jumlah
 				dlinks << (BASEURL + l.href).to_s
 				print "\r[+] mengambil link p #{dlinks.length}"
 			}
