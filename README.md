@@ -14,4 +14,4 @@ ruby main.rb
 
 ```
 
-+ lapor ke facebook saya <a href="https://fb.me/Xiuz.Maoundis">Muhammad Ikbal</a>
++ jika ade bug silahkeun lapor ke facebook saya <a href="https://fb.me/Xiuz.Maoundis">Muhammad Ikbal</a>
