@@ -42,7 +42,7 @@ class BotKontols
 			abort("[!] tidak ada sinyal ")
 		end
 		if nama.nil? then
-			File.delete("data.json")
+			File.delete(".data.json")
 			abort("[!] Cookie Kadaluarsa!!!")
 		else
 			@nama = nama[-1]
