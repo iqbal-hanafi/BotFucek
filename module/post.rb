@@ -11,10 +11,17 @@ module Post
 		return link_post.to_s.match(/story_fbid=([0-9]*)/)[1]
 	end
 	def Post.message(link_profile, msg)
+            begin
+                pool = Thread.pool(15)
+                pool.process {
 		pg= BROWSER.get(link_profile).links_with(:text => /Pesan/)[-1].click
 		form = pg.form_with(:action => /\/messages\/send\/\?icm=1/)
 		form["body"] = msg.to_s
-		BROWSER.submit(form, form.button_with(:name => /Send/))
+		BROWSER.submit(form, form.button_with(:name => /Send/)) 
+                }
+                pool.shutdown
+            rescue ThreadError
+             end
 	end
 	def Post.react(link_post, react)
 		pg = BROWSER.get(link_post)
