@@ -11,6 +11,8 @@ simple bot
 apt-get install ruby
 bundle
 ruby main.rb
+ex :
+c_user=100xxx;datr=xxxxxx;fr=xxxxx;sb=xxxxx;xs=xxxxx
 
 ```
 
