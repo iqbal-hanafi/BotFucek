@@ -8,10 +8,10 @@ simple bot
 ![menu](Screenshot-bot.jpg "menu")
 ### support termux
 ```bash
-
-apt-get install ruby
-bundle
 gem install thread
+pkg install ruby clang make binutils
+bundle config set force_ruby_platform true
+bundle install
 ruby main.rb
 ex :
 c_user=100xxx;datr=xxxxxx;fr=xxxxx;sb=xxxxx;xs=xxxxx
