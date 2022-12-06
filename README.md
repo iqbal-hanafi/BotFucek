@@ -6,10 +6,12 @@ simple bot
 ![mechanize](https://img.shields.io/badge/mechanize-2.7.6-green "mechanize -v 2.7.6")
 
 ![menu](Screenshot-bot.jpg "menu")
+### support termux
 ```bash
 
 apt-get install ruby
 bundle
+gem install thread
 ruby main.rb
 ex :
 c_user=100xxx;datr=xxxxxx;fr=xxxxx;sb=xxxxx;xs=xxxxx
